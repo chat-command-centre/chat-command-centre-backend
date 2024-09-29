@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "command-centre-python"
+version = "0.1.0"
+description = ""
+authors = ["Jacob Valdez <jacobfv123@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.9.2"
+fastapi = ">=0.111.1,<0.112.0"
+ell-ai = "^0.0.12"
+sqlmodel = ">=0.0.21,<0.0.22"
+uvicorn = ">=0.30.3,<0.31.0"
+openai = "^1.50.2"
+anthropic = "^0.34.2"
+humps = "^0.2.2"
+google-auth-oauthlib = "^1.2.1"
+google-api-python-client = "^2.147.0"
+msal = "^1.31.0"
+requests = "^2.32.3"
+icalendar = "^6.0.0"
+watchdog = "^5.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
