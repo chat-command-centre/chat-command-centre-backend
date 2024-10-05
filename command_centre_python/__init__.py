@@ -78,6 +78,10 @@ async def get_session() -> AsyncGenerator[AsyncSession, None]:
 class DataSource(EntityBase):
     pass  # use raw sql for now
 
+class DataEntry(EntityBase):
+    data_source: DataSource
+    data: Dict[str, Any]
+
 
 class Event(EntityBase):
     parent: Optional[Event] = None
@@ -159,7 +163,7 @@ class CRONTriggerDispatcher(TriggerDispatcherBase):
 
 class CRONTrigger(Trigger):
     dispatcher: CRONTriggerDispatcher
-    conditions: Dict[str, Any] = Field(default_factory=dict)
+    conditions: Dict[str, Any] = Field(default_factory=dict) # 3rd sat every month = "3 * * * *"
 
     def check_conditions(self, event_data: Dict[str, Any]) -> bool:
         # Implement condition checks if needed
