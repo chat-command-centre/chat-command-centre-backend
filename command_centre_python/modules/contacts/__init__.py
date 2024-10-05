@@ -1,0 +1,15 @@
+from .contact import (
+    Contact,
+    ContactMethod,
+    EmailAddress,
+    PhoneNumber,
+    Address,
+    Website,
+    SocialMediaHandle,
+    TwitterHandle,
+    InstagramHandle,
+    FacebookHandle,
+    LinkedInHandle,
+    TikTokHandle,
+    YouTubeHandle,
+)
